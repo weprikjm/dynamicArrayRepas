@@ -23,7 +23,7 @@ public:
 	}
 
 	int GetElements(){ return numElements; }
-	int GetMemory(){ return numElements; }
+	int GetMemory(){ return allocatedMemory; }
 
 
 
@@ -125,7 +125,7 @@ public:
 	
 	}
 
-	void CopyArray(TYPE* dst,TYPE* src, int offset, int until)
+	void CopyArray(TYPE* dst,TYPE* src, const unsigned int offset, const unsigned int until)
 	{
 		for (int i = offset; i <= until; i++)
 		{
@@ -143,7 +143,7 @@ public:
 
 		for (int i = 0; i < numElements; i++)
 		{
-			printf("%c",content[i]);
+			printf("%c",content[i]);//We manually change % because i don't know how to make the program detect its type (it doesn't really matter cause its for debugging)
 		}
 	}
 
